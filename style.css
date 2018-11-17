@@ -1,3 +1,64 @@
-html {
-  background-color: red;
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.header {
+  max-height: 90vw;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+#canvas {
+  border: 2px solid black;
+  max-width: 90vw;
+}
+
+.answer-buttons {
+  width: 400px;
+  height: auto;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.start-button {
+  border: 0;
+  margin: 25px;
+  box-shadow: 0;
+  background: linear-gradient(to bottom, black, white);
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.instructions {
+  padding: 20 px 40px;
+  justify-content: center;
+}
+#game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game-intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 20px;
+  padding: 50px;
+}
+
+.btn {
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  margin: 0 7px 11px 0;
+  padding: 0 20px;
+  text-align: center;
 }
