@@ -1,9 +1,10 @@
-console.log("hello");
+// console.log("hello");
 
 $(document).ready(function() {
   $(".btn").click(function() {
-    // if  button class is correct then window alert correct
-    if ($(this).hasClass("correct")) {
+    console.log(this.innerText);
+    // if  then window alert correct
+    if (this.innerText === displayPose.buttonText) {
       window.alert("you are correct");
     } else {
       window.alert("you are wrong");

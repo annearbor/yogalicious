@@ -127,11 +127,15 @@ $(function() {
     }
   ];
 
+  // variable name better be currentPoses
   var currentPoseArray = [];
+  //selets a random element from the array
   var randomCurrentPose = Math.floor(Math.random() * poses.length);
+  //creates a new variables that is the current displayed pose
   var displayPose = poses[randomCurrentPose];
   currentPoseArray.push(displayPose);
 
+  //invokes the function that draws the image on the canvas
   displayPose.image();
 
   var otherAnswersArray = extraPoses.filter(function(x) {
@@ -142,6 +146,7 @@ $(function() {
     if (currentPoseArray.length === 3) {
       break;
     } else {
+      //pushes a random pose (button) from the other array into a new array
       var randomButton = Math.floor(Math.random() * otherAnswersArray.length);
       currentPoseArray.push(otherAnswersArray[randomButton]);
       otherAnswersArray.splice(randomButton, 1);
@@ -151,22 +156,29 @@ $(function() {
   //console.log(currentPoseArray);
 
   for (var i = 0; i < 3; i++) {
-    //take one away each time
-    //  if (i === 1) {
+    //takes random element from that array and assigns the buttonText to the button
+
     var randomIndex = Math.floor(Math.random() * currentPoseArray.length);
     var randomButtonString = currentPoseArray[randomIndex];
     var idName = "btn" + (i + 1);
     document.getElementById(idName).innerText = randomButtonString.buttonText;
-    // }
-
-    // $("#btn1").(randomButtonString.buttonText);
 
     console.log(randomButtonString);
+    //removes the "used" name from the array so it doesnt get assigned twice
     currentPoseArray.splice(randomIndex, 1);
   }
 
-  //splice(randomIndex, 1)
-  // $(".answer-buttons").append(randomButtonString);
+  $(document).ready(function() {
+    $(".btn").click(function() {
+      console.log(this.innerText);
+      // if  then window alert correct
+      if (this.innerText === displayPose.buttonText) {
+        window.alert("you are correct");
+      } else {
+        window.alert("you are wrong");
+      }
+    });
+  });
 });
 
 // $(function() {
