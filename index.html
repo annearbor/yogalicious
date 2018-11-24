@@ -6,20 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
-    <script type="text/javascript" src="canvas.js"></script>
-   <!---<script src="script.js"></script>-->
+   
   </head>
   <body>
     <header class="header"><h1>YOGISTAR</h1>
     </header>
     <div class="game-intro">
       <div class="instructions">
-          <p>some text that explains the game in a bit more detail</p> <br></b>
+          <p>Namaste! Which level would you like to play today?</p> <br></b>
     </div>
-    <div class="start-button">StartGame</div>
-    
+    <div class="level1">Beginner</div>
+    <div class="level2">Advanced</div>
   </div>
     <div id="game-container">
       <div id="postures">
@@ -29,19 +26,22 @@
       <div class="answer-buttons"> 
           <ul>
             <li>
-              <button class="btn btn1" id="btn1">button 1</button>
+              <button class="btn btn1" id="btn1">1</button>
             </li>
             <li>
-              <button class="btn btn2" id="btn2" >button 2</button>
+              <button class="btn btn2" id="btn2" >2</button>
             </li>
             <li>
-              <button class="btn btn3" id="btn3">button 3</button>
+              <button class="btn btn3" id="btn3">3</button>
             </li>
           </ul>
+          <div id="counter"></div>
       </div>
         <!-- End Controls -->
-      </div>
-      <footer>This is a footer placeholder</footer>
-    </div>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script type="text/javascript" src="poses_.js"></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

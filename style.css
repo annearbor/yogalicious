@@ -16,34 +16,6 @@ h1 {
   max-width: 90vw;
 }
 
-.answer-buttons {
-  width: 400px;
-  height: auto;
-  list-style-type: none;
-  padding: 20px;
-}
-
-.start-button {
-  border: 0;
-  margin: 25px;
-  box-shadow: 0;
-  background: linear-gradient(to bottom, black, white);
-  color: #fff;
-  padding: 20px 40px;
-  font-size: 20px;
-  border-radius: 5px;
-}
-
-.instructions {
-  padding: 20 px 40px;
-  justify-content: center;
-}
-#game-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .game-intro {
   display: flex;
   flex-wrap: wrap;
@@ -52,13 +24,77 @@ h1 {
   padding: 50px;
 }
 
+.instructions {
+  order: 1;
+  padding: 20 px 40px;
+  justify-content: center;
+}
+
+.level1 {
+  order: 2;
+  border: 0;
+  margin: 25px;
+  box-shadow: 0;
+  background: linear-gradient(to bottom, black, white);
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.level2 {
+  order: 3;
+  border: 0;
+  margin: 25px;
+  box-shadow: 0;
+  background: linear-gradient(to bottom, white, black);
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.answer-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  height: auto;
+  padding: 20px;
+}
+#counter {
+  max-height: 50px;
+  border: 0;
+  margin: 40px;
+  box-shadow: 0;
+  background: linear-gradient(to bottom, black, white);
+  color: #fff;
+  padding: 40px 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+ul {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+#game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .btn {
-  position: relative;
   top: 0;
   cursor: pointer;
-  border: none;
+  border: 1px solid black;
   border-radius: 3px;
   margin: 0 7px 11px 0;
   padding: 0 20px;
   text-align: center;
+  font-size: 18px;
 }
