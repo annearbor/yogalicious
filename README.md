@@ -1,2 +1,2 @@
 # yogalicious
-A learning game yoga poses
+A learning game for yoga poses
