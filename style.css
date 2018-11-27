@@ -30,6 +30,12 @@ h1 {
   margin-right: 25%;
 }
 
+p {
+  text-align: center;
+  padding: 35px;
+  line-height: 120%;
+}
+
 input {
   border: 1px solid black;
 }
@@ -41,7 +47,6 @@ input {
   align-items: center;
 }
 .nameInputcontainer {
-  flex: 0 1 auto;
   padding: 16px;
 }
 
@@ -49,13 +54,13 @@ input {
   display: flex;
   flex-wrap: wrap;
   padding: 20px 40px;
+  margin-bottom: 0px;
   justify-content: center;
 }
 
 .choosetext {
-  flex: 0 1 auto;
   padding: 20px 40px;
-  max-width: 200px;
+  max-width: 300px;
   margin: 25px;
   text-align: center;
 }
@@ -134,4 +139,12 @@ li {
   padding: 0 20px;
   text-align: center;
   font-size: 18px;
+}
+
+.blocked {
+  pointer-events: none;
+}
+
+.reload {
+  display: none;
 }

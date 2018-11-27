@@ -34,6 +34,10 @@ $(document).ready(function() {
     countTotal();
   });
 
+  $(".reload").click(function() {
+    location.reload();
+  });
+
   $(".btn").click(function() {
     if ($(this).attr("pose-name") === displayPose.name) {
       console.log("pose-name");
@@ -138,17 +142,20 @@ function selectExtraPoses() {
 function positiveFeedbackScreen() {
   ctx.font = "25px serif";
   ctx.fillText("Well done", 250, 200, 100);
-  //text, x, y, max with
+  $(document.getElementsByClassName("btn")).addClass("blocked");
 }
+//text, x, y, max with
 
 function negativeFeedbackScreen() {
   ctx.font = "25px serif";
   ctx.fillText("Maybe next time...", 200, 200, 400);
+  $(document.getElementsByClassName("btn")).addClass("blocked");
 }
 
 function delay() {
   setTimeout(() => {
     update();
+    $(document.getElementsByClassName("btn")).removeClass("blocked");
   }, 2000);
 }
 function update() {
@@ -176,6 +183,8 @@ function checkGameEnd() {
     setHighscore();
     showResult();
     drawHighscore();
+    $(document.getElementsByClassName("btn")).toggle(false);
+    $(document.getElementsByClassName("reload")).toggle(true);
     return true;
   } else {
     return false;
@@ -193,14 +202,26 @@ function setHighscore() {
   if (!highscoresArray) {
     highscoresArray = [];
   }
-  highscoresArray.push({ name: "yogi löw", score: counter1 });
+  highscoresArray.push({ name: $("#playerName").val(), score: counter1 });
   localStorage.setItem("highscores", JSON.stringify(highscoresArray));
+  console.log(highscoresArray);
 }
 
 function drawHighscore() {
   var highscoresArray = JSON.parse(localStorage.getItem("highscores"));
+  highscoresArray.sort(function(a, b) {
+    if (a.score < b.score) {
+      return 1;
+    } else if (a.score > b.score) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
   highscoresArray.forEach(function(el, index) {
-    ctx.font = "25px serif red";
-    ctx.fillText(el.name + " => " + el.score, 190, 180 + index * 30);
+    if (index <= 7) {
+      ctx.font = "25px serif red";
+      ctx.fillText(el.name + " >" + el.score, 190, 180 + index * 30);
+    }
   });
 }
