@@ -11,33 +11,44 @@
   <body>
     <header class="header"><h1>YOGISTAR</h1>
     </header>
-    <div class="game-intro">
-      <div class="instructions">
-          <p>Namaste! Which level would you like to play today?</p> <br></b>
+    <div id="game-intro">
+        <div class="nameQuestion">Namaste!</div>
+          <form class="nameInputcontainer" action="#">
+            <label for="playerName">Yogi Name</label>
+            <input type="text" id="playerName" /></form> 
+        <div class="chooselevel">
+          <div class="choosetext">
+            <p>Choose your level</p> <br></b>
+          <div class="level1">Beginner</div>
+          <div class="level2">Advanced</div>
+        </div>
+      </div>
     </div>
-    <div class="level1">Beginner</div>
-    <div class="level2">Advanced</div>
-  </div>
-    <div id="game-container">
-      <div id="postures">
-        <canvas id="canvas" height="400px" width="600px"></canvas>
+     <div id="game-container">
+        <div id="postures">
+          <canvas id="canvas" height="400px" width="600px"></canvas>
+        </div>
+        <!-- Answer buttons  -->
+        <div class="answer-buttons"> 
+            <ul>
+              <li>
+                <button class="btn btn1" id="btn1" data-pose-name="...">1</button>
+              </li>
+              <li>
+                <button class="btn btn2" id="btn2" >2</button>
+              </li>
+              <li>
+                <button class="btn btn3" id="btn3">3</button>
+              </li>
+            </ul>
+            <div class="counter">
+              <div id="countCorrect"></div>
+              <div id="countTotal"></div>
+            </div>
+          </div>
+   
       </div>
-      <!-- Answer buttons  -->
-      <div class="answer-buttons"> 
-          <ul>
-            <li>
-              <button class="btn btn1" id="btn1">1</button>
-            </li>
-            <li>
-              <button class="btn btn2" id="btn2" >2</button>
-            </li>
-            <li>
-              <button class="btn btn3" id="btn3">3</button>
-            </li>
-          </ul>
-          <div id="counter"></div>
-      </div>
-        <!-- End Controls -->
+   
       
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>

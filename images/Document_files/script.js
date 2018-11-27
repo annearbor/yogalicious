@@ -14,19 +14,13 @@ var counter2 = 0;
 $(document).ready(function() {
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
-  $(document.getElementById("game-container")).toggle(false);
-
   $(".level1").click(function() {
     //set attr("pose-name") = >buttonText
-    $(document.getElementById("game-intro")).toggle(false);
-    $(document.getElementById("game-container")).toggle(true);
     update();
-    countTotal();
   });
   // §(".level2").click(function() {
   //   //set attribute -> sanskritText
-  // $(document.getElementById("game-intro")).hide();//
-  //  update();
+  //   update();
   // });
 
   //if (displayPose !== 0) {
@@ -36,11 +30,13 @@ $(document).ready(function() {
       clearCanvas();
       positiveFeedbackScreen();
       countCorrect();
+      countTotal();
       if (checkGameEnd()) return;
       delay();
     } else {
       //window.alert("you are wrong");
       clearCanvas();
+      countTotal();
       negativeFeedbackScreen();
       if (checkGameEnd()) return;
       delay();
@@ -155,9 +151,9 @@ function update() {
 function countCorrect() {
   counter1++;
   if (counter1 == O) {
-    document.getElementById("countCorrect").innerText = "Zero";
+    document.getElementById("countCorrect").innerHTML = "Zero";
   } else {
-    document.getElementById("countCorrect").innerText = counter1;
+    document.getElementById("countCorrect").innerHTML = counter1;
 
     // ctx.font = "16px serif red";
     // ctx.fillText("Score: " + counter, 190, 150);
@@ -165,7 +161,8 @@ function countCorrect() {
 }
 
 function countTotal() {
-  document.getElementById("countTotal").innerText = "/" + poses.length;
+  counter2++;
+  document.getElementById("countTotal").innerHTML = " / " + counter2;
 }
 
 function checkGameEnd() {
