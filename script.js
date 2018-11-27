@@ -10,6 +10,8 @@ var buttonClass = "btn";
 var counter1 = 0;
 var counter2 = 0;
 
+var level;
+
 //onclick draw canvas and hide the buttons , in the same div, toggle hide /show
 $(document).ready(function() {
   canvas = document.getElementById("canvas");
@@ -17,30 +19,34 @@ $(document).ready(function() {
   $(document.getElementById("game-container")).toggle(false);
 
   $(".level1").click(function() {
-    //set attr("pose-name") = >buttonText
     $(document.getElementById("game-intro")).toggle(false);
     $(document.getElementById("game-container")).toggle(true);
+    level = "level1";
     update();
     countTotal();
   });
-  // §(".level2").click(function() {
-  //   //set attribute -> sanskritText
-  // $(document.getElementById("game-intro")).hide();//
-  //  update();
-  // });
 
-  //if (displayPose !== 0) {
+  $(".level2").click(function() {
+    $(document.getElementById("game-intro")).toggle(false);
+    $(document.getElementById("game-container")).toggle(true);
+    level = "level2";
+    update();
+    countTotal();
+  });
+
   $(".btn").click(function() {
     if ($(this).attr("pose-name") === displayPose.name) {
       console.log("pose-name");
       clearCanvas();
       positiveFeedbackScreen();
       countCorrect();
+      countTotal();
       if (checkGameEnd()) return;
       delay();
     } else {
       //window.alert("you are wrong");
       clearCanvas();
+      countTotal();
       negativeFeedbackScreen();
       if (checkGameEnd()) return;
       delay();
@@ -104,30 +110,29 @@ function selectExtraPoses() {
     var randomCurrentPose = sample(currentPoseArray);
     console.log("randomCurrentPose", randomCurrentPose);
     var idName = "btn" + (i + 1);
-    document.getElementById(idName).innerText = randomCurrentPose.buttonText;
-    $(document.getElementById(idName)).attr(
-      "pose-name",
-      randomCurrentPose.buttonText
-    );
-    //$(document.getElementById(idName)).attr("pose-name",randomCurrentPose.sanskritText);
+    if (level === "level1") {
+      document.getElementById(idName).innerText = randomCurrentPose.buttonText;
+      $(document.getElementById(idName)).attr(
+        "pose-name",
+        randomCurrentPose.name
+      );
+    } else {
+      document.getElementById(idName).innerText =
+        randomCurrentPose.sanskritText;
+      $(document.getElementById(idName)).attr(
+        "pose-name",
+        randomCurrentPose.name
+      );
+    }
+    // $(document.getElementById(idName)).attr(
+    //   "pose-name",
+    //   randomCurrentPose.name
+    // );
+
     // removes the "used" name from the array so it doesnt get assigned twice
 
     currentPoseArray.splice(currentPoseArray.indexOf(randomCurrentPose), 1);
   }
-}
-
-// function setLevelOne() {
-//   var buttonClass = "btn";
-//   document.getElementsByClassName(buttonClass).innerText =
-//     randomCurrentPose.buttonText;
-//   $(document.getElementById(idName)).attr("pose-name", randomCurrentPose.name);
-// }
-
-function setlevelOne() {
-  var idName = "btn" + (i + 1);
-
-  document.getElementById(idName).innerText = randomCurrentPose.buttonText;
-  $(document.getElementById(idName)).attr("pose-name", randomCurrentPose.name);
 }
 
 function positiveFeedbackScreen() {
@@ -154,22 +159,20 @@ function update() {
 
 function countCorrect() {
   counter1++;
-  if (counter1 == O) {
-    document.getElementById("countCorrect").innerText = "Zero";
+  if (counter1 == 0) {
+    document.getElementById("countCorrect").innerText = "0";
   } else {
     document.getElementById("countCorrect").innerText = counter1;
-
-    // ctx.font = "16px serif red";
-    // ctx.fillText("Score: " + counter, 190, 150);
   }
 }
 
 function countTotal() {
+  counter2++;
   document.getElementById("countTotal").innerText = "/" + poses.length;
 }
 
 function checkGameEnd() {
-  if (counter1 === poses.length) {
+  if (counter2 === poses.length) {
     setHighscore();
     showResult();
     drawHighscore();
@@ -182,7 +185,7 @@ function checkGameEnd() {
 function showResult() {
   clearCanvas();
   ctx.font = "25px serif";
-  ctx.fillText("Correct answers:" + count, 190, 150);
+  ctx.fillText("Correct answers:" + counter1, 190, 150);
 }
 
 function setHighscore() {
@@ -190,7 +193,7 @@ function setHighscore() {
   if (!highscoresArray) {
     highscoresArray = [];
   }
-  highscoresArray.push({ name: "yogi löw", score: count });
+  highscoresArray.push({ name: "yogi löw", score: counter1 });
   localStorage.setItem("highscores", JSON.stringify(highscoresArray));
 }
 

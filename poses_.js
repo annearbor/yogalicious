@@ -99,44 +99,45 @@ var poses = [
       };
       img.src = "./images/wheel.png";
     }
-  },
-  {
-    name: "shoulderstand",
-    buttonText: "Supported Shoulderstand",
-    sanskritText: "Salamba Sarvangasana",
-    image: function() {
-      var img = new Image();
-      img.onload = function() {
-        ctx.drawImage(img, 0, 0, 600, 400);
-      };
-      img.src = "./images/shoulderstand.png";
-    }
-  },
-  {
-    name: "plow",
-    buttonText: "Plow Pose",
-    sanskritText: "Halasana",
-    image: function() {
-      var img = new Image();
-      img.onload = function() {
-        ctx.drawImage(img, 0, 0, 600, 400);
-      };
-      img.src = "./images/halasana.png";
-    }
-  },
-  {
-    name: "updog",
-    buttonText: "Upward-facing Dog",
-    sanskritText: "Urdhva Mukha Svanasana",
-    image: function() {
-      var img = new Image();
-      imgScale = 640 / 480;
-      img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-      };
-      img.src = "./images/upwarddog.png";
-    }
   }
+  // ,
+  // {
+  //   name: "shoulderstand",
+  //   buttonText: "Supported Shoulderstand",
+  //   sanskritText: "Salamba Sarvangasana",
+  //   image: function() {
+  //     var img = new Image();
+  //     img.onload = function() {
+  //       ctx.drawImage(img, 0, 0, 600, 400);
+  //     };
+  //     img.src = "./images/shoulderstand.png";
+  //   }
+  // },
+  // {
+  //   name: "plow",
+  //   buttonText: "Plow Pose",
+  //   sanskritText: "Halasana",
+  //   image: function() {
+  //     var img = new Image();
+  //     img.onload = function() {
+  //       ctx.drawImage(img, 0, 0, 600, 400);
+  //     };
+  //     img.src = "./images/halasana.png";
+  //   }
+  // },
+  // {
+  //   name: "updog",
+  //   buttonText: "Upward-facing Dog",
+  //   sanskritText: "Urdhva Mukha Svanasana",
+  //   image: function() {
+  //     var img = new Image();
+  //     imgScale = 640 / 480;
+  //     img.onload = function() {
+  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+  //     };
+  //     img.src = "./images/upwarddog.png";
+  //   }
+  // }
   //,
   // {
   //   name: "bow",
