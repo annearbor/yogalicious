@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    
   </head>
   <body>
-<!-- <div class="bigcontainer">  -->
+    <div class="bigcontainer">
       <header class="header"><h1>YOGISTAR</h1></header>
       <div id="game-intro">
         <p>
@@ -32,11 +34,11 @@
       </div>
       <div id="game-container">
         <div id="postures">
-          <canvas id="canvas" height="400px" width="600px"></canvas>
+          <canvas id="canvas" height="400px" width="600px"> </canvas>
         </div>
         <!-- Answer buttons -->
         <div class="answer-buttons">
-          <button class="reload btn">Reload thissssssssss</button>
+          <button id="reload" class="btn">Play again</button>
           <ul>
             <li><button class="btn btn1" id="btn1">1</button></li>
             <li><button class="btn btn2" id="btn2">2</button></li>
@@ -46,14 +48,13 @@
             <div id="countCorrect"></div>
             <div id="countTotal"></div>
           </div>
-          <div class="highscore">shows HIGHScore</div>
         </div>
+        <div class="highscore">shows HIGHScore</div>
       </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="poses_.js"></script>
     <script type="text/javascript" src="script.js"></script>
- -->
   </body>
 </html>

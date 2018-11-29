@@ -477,5 +477,3 @@ var extraPoses = [
     sanskritText: "Bhujapidasana"
   }
 ];
-
-//pashimo

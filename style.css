@@ -4,6 +4,7 @@
 
 .bigcontainer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -16,11 +17,6 @@
 h1 {
   font-size: 45px;
   text-align: center;
-}
-
-#canvas {
-  border: 2px solid black;
-  max-width: 90vw;
 }
 
 #game-intro {
@@ -36,6 +32,10 @@ h1 {
   margin-left: 25%;
   margin-right: 25%;
 }
+
+/* #postures {
+  min-width: ;
+} */
 
 p {
   text-align: center;
@@ -63,6 +63,7 @@ input {
   padding: 20px 40px;
   margin-bottom: 0px;
   justify-content: center;
+  text-align: center;
 }
 
 .choosetext {
@@ -100,23 +101,43 @@ input {
   text-align: center;
 }
 
+#game-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
+}
+/* 
+#canvas {
+  border: 2px solid black;
+  max-width: 90vw;
+  text-align: center;
+} */
+
+#canvas {
+  /* display: inline-block; */
+  text-align: center;
+  border: 1px solid black;
+  max-width: 90vw;
+  min-width: 60vw;
+}
 .answer-buttons {
   display: flex;
-  flex-wrap: wrap;
   width: auto;
-  height: auto;
+  max-height: 100px;
   padding: 20px;
   align-self: center;
 }
 .counter {
   max-height: 50px;
   border: 0;
-  margin: 40px;
+  margin-left: 80px;
   box-shadow: 0;
-  background: linear-gradient(to bottom, black, white);
+  background: black;
   color: #fff;
-  padding: 40px 40px;
-  font-size: 20px;
+  padding: 20px 40px;
+  font-size: 18px;
   border-radius: 5px;
   text-align: center;
 }
@@ -128,13 +149,6 @@ ul {
 
 li {
   list-style-type: none;
-}
-
-#game-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 10px;
 }
 
 .btn {
@@ -152,6 +166,25 @@ li {
   pointer-events: none;
 }
 
-.reload {
+#reload {
   display: none;
+}
+
+.reloadButton {
+  top: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 7px 11px 0;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.highscore {
+  display: none;
+  border: 1px solid black;
+  width: 90vw;
+  text-align: center;
 }

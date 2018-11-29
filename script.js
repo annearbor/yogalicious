@@ -34,7 +34,7 @@ $(document).ready(function() {
     countTotal();
   });
 
-  $(".reload").click(function() {
+  $("#reload").click(function() {
     location.reload();
   });
 
@@ -128,10 +128,6 @@ function selectExtraPoses() {
         randomCurrentPose.name
       );
     }
-    // $(document.getElementById(idName)).attr(
-    //   "pose-name",
-    //   randomCurrentPose.name
-    // );
 
     // removes the "used" name from the array so it doesnt get assigned twice
 
@@ -140,15 +136,16 @@ function selectExtraPoses() {
 }
 
 function positiveFeedbackScreen() {
-  ctx.font = "25px serif";
-  ctx.fillText("Well done", 250, 200, 100);
+  ctx.font = "25px Montserrat";
+  ctx.fillText("You're a Yogistar!", 200, 200, 400);
   $(document.getElementsByClassName("btn")).addClass("blocked");
 }
 //text, x, y, max with
 
 function negativeFeedbackScreen() {
-  ctx.font = "25px serif";
-  ctx.fillText("Maybe next time...", 200, 200, 400);
+  ctx.font = "25px Montserrat";
+  ctx.fillText("Sometimes you win,", 185, 200, 400);
+  ctx.fillText("sometimes you learn", 185, 250, 400);
   $(document.getElementsByClassName("btn")).addClass("blocked");
 }
 
@@ -183,8 +180,11 @@ function checkGameEnd() {
     setHighscore();
     showResult();
     drawHighscore();
-    $(document.getElementsByClassName("btn")).toggle(false);
-    $(document.getElementsByClassName("reload")).toggle(true);
+    $(document.getElementsByClassName("btn"))
+      .removeClass("blocked")
+      .toggle(false);
+
+    $(document.getElementById("reload")).toggle(true);
     return true;
   } else {
     return false;
@@ -193,8 +193,8 @@ function checkGameEnd() {
 
 function showResult() {
   clearCanvas();
-  ctx.font = "25px serif";
-  ctx.fillText("Correct answers:" + counter1, 190, 150);
+  ctx.font = "20px Montserrat";
+  ctx.fillText("Correct answers:" + counter1, 190, 90);
 }
 
 function setHighscore() {
@@ -220,8 +220,8 @@ function drawHighscore() {
   });
   highscoresArray.forEach(function(el, index) {
     if (index <= 7) {
-      ctx.font = "25px serif red";
-      ctx.fillText(el.name + " >" + el.score, 190, 180 + index * 30);
+      ctx.font = "20px Montserrat";
+      ctx.fillText(el.name + " >" + el.score, 190, 120 + index * 30);
     }
   });
 }
