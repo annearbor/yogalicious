@@ -130,9 +130,8 @@ var poses = [
     sanskritText: "Urdhva Mukha Svanasana",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/upwarddog.png";
     }
@@ -143,9 +142,8 @@ var poses = [
     sanskritText: "Urdha Dhanurasana",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/bow.png";
     }
@@ -156,9 +154,8 @@ var poses = [
     sanskritText: "Savasana",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/corpse.png";
     }
@@ -169,9 +166,8 @@ var poses = [
     sanskritText: "Bakasana",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/crow.png";
     }
@@ -182,9 +178,8 @@ var poses = [
     sanskritText: "Matsyasana",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/fish.png";
     }
@@ -195,9 +190,8 @@ var poses = [
     sanskritText: "Urdhva Prasarita Eka Padasana",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/standingsplit.png";
     }
@@ -209,9 +203,8 @@ var poses = [
     sanskritText: "Mayurasana",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/peacock.png";
     }
@@ -222,9 +215,8 @@ var poses = [
     sanskritText: "Pincha Mayurasana",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/forearm.png";
     }
@@ -235,9 +227,8 @@ var poses = [
     sanskritText: "Adho Mukha Vrksasana",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/handstand.png";
     }
@@ -248,9 +239,8 @@ var poses = [
     sanskritText: "Tadasana",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/mountain.png";
     }
@@ -261,9 +251,8 @@ var poses = [
     sanskritText: "Vrksasana",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/tree.png";
     }
@@ -274,9 +263,8 @@ var poses = [
     sanskritText: "Virabhadrasana I",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/warriorI.png";
     }
@@ -287,9 +275,8 @@ var poses = [
     sanskritText: "Virabhadrasana III",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/warriorIII.png";
     }
@@ -300,9 +287,8 @@ var poses = [
     sanskritText: "Marichyasana III",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/twist.png";
     }
@@ -313,9 +299,8 @@ var poses = [
     sanskritText: "Bhujapidasana",
     image: function() {
       var img = new Image();
-      imgScale = 640 / 480;
       img.onload = function() {
-        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+        ctx.drawImage(img, 0, 0, 600, 400);
       };
       img.src = "./images/shoulderpressing.png";
     }
