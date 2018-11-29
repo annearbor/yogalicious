@@ -99,229 +99,227 @@ var poses = [
       };
       img.src = "./images/wheel.png";
     }
-  }
-  // ,
-  // {
-  //   name: "shoulderstand",
-  //   buttonText: "Supported Shoulderstand",
-  //   sanskritText: "Salamba Sarvangasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 600, 400);
-  //     };
-  //     img.src = "./images/shoulderstand.png";
-  //   }
-  // },
-  // {
-  //   name: "plow",
-  //   buttonText: "Plow Pose",
-  //   sanskritText: "Halasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 600, 400);
-  //     };
-  //     img.src = "./images/halasana.png";
-  //   }
-  // },
-  // {
-  //   name: "updog",
-  //   buttonText: "Upward-facing Dog",
-  //   sanskritText: "Urdhva Mukha Svanasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/upwarddog.png";
-  //   }
-  // }
-  //,
-  // {
-  //   name: "bow",
-  //   buttonText: "Bow Pose",
-  //   sanskritText: "Urdha Dhanurasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/bow.png";
-  //   }
-  // },
-  // {
-  //   name: "corpse",
-  //   buttonText: "Corpse Pose",
-  //   sanskritText: "Savasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/corpse.png";
-  //   }
-  // },
-  // {
-  //   name: "crow",
-  //   buttonText: "Crow Pose",
-  //   sanskritText: "Bakasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/crow.png";
-  //   }
-  // },
-  // {
-  //   name: "fish",
-  //   buttonText: "Fish Pose",
-  //   sanskritText: "Matsyasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/fish.png";
-  //   }
-  // },
-  // {
-  //   name: "standingsplit",
-  //   buttonText: "Standing Split",
-  //   sanskritText: "Urdhva Prasarita Eka Padasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/standingsplit.png";
-  //   }
-  // },
+  },
+  {
+    name: "shoulderstand",
+    buttonText: "Supported Shoulderstand",
+    sanskritText: "Salamba Sarvangasana",
+    image: function() {
+      var img = new Image();
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 600, 400);
+      };
+      img.src = "./images/shoulderstand.png";
+    }
+  },
+  {
+    name: "plow",
+    buttonText: "Plow Pose",
+    sanskritText: "Halasana",
+    image: function() {
+      var img = new Image();
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 600, 400);
+      };
+      img.src = "./images/halasana.png";
+    }
+  },
+  {
+    name: "updog",
+    buttonText: "Upward-facing Dog",
+    sanskritText: "Urdhva Mukha Svanasana",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/upwarddog.png";
+    }
+  },
+  {
+    name: "bow",
+    buttonText: "Bow Pose",
+    sanskritText: "Urdha Dhanurasana",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/bow.png";
+    }
+  },
+  {
+    name: "corpse",
+    buttonText: "Corpse Pose",
+    sanskritText: "Savasana",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/corpse.png";
+    }
+  },
+  {
+    name: "crow",
+    buttonText: "Crow Pose",
+    sanskritText: "Bakasana",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/crow.png";
+    }
+  },
+  {
+    name: "fish",
+    buttonText: "Fish Pose",
+    sanskritText: "Matsyasana",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/fish.png";
+    }
+  },
+  {
+    name: "standingsplit",
+    buttonText: "Standing Split",
+    sanskritText: "Urdhva Prasarita Eka Padasana",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/standingsplit.png";
+    }
+  },
 
-  // {
-  //   name: "peacock",
-  //   buttonText: "Peacock Pose",
-  //   sanskritText: "Mayurasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/peacock.png";
-  //   }
-  // },
-  // {
-  //   name: "forearmstand",
-  //   buttonText: "Feathered Peacock Stand",
-  //   sanskritText: "Pincha Mayurasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/forearm.png";
-  //   }
-  // },
-  // {
-  //   name: "handstand",
-  //   buttonText: "Handstand",
-  //   sanskritText: "Adho Mukha Vrksasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/handstand.png";
-  //   }
-  // },
-  // {
-  //   name: "mountain",
-  //   buttonText: "Mountain Pose",
-  //   sanskritText: "Tadasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/mountain.png";
-  //   }
-  // },
-  // {
-  //   name: "tree",
-  //   buttonText: "Tree Pose",
-  //   sanskritText: "Vrksasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/tree.png";
-  //   }
-  // },
-  // {
-  //   name: "warrior1",
-  //   buttonText: "Warrior I",
-  //   sanskritText: "Virabhadrasana I",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/warriorI.png";
-  //   }
-  // },
-  // {
-  //   name: "warrior3", //
-  //   buttonText: "Warrior III",
-  //   sanskritText: "Virabhadrasana III",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/warriorIII.png";
-  //   }
-  // },
-  // {
-  //   name: "marichiIII",
-  //   buttonText: "Pose Dedicated to the Sage Marichi III",
-  //   sanskritText: "Marichyasana III",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/twist.png";
-  //   }
-  // },
-  // {
-  //   name: "shoulderpressing",
-  //   buttonText: "Shoulder-Pressing Pose",
-  //   sanskritText: "Bhujapidasana",
-  //   image: function() {
-  //     var img = new Image();
-  //     imgScale = 640 / 480;
-  //     img.onload = function() {
-  //       ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
-  //     };
-  //     img.src = "./images/shoulderpressing.png";
-  //   }
-  // }
+  {
+    name: "peacock",
+    buttonText: "Peacock Pose",
+    sanskritText: "Mayurasana",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/peacock.png";
+    }
+  },
+  {
+    name: "forearmstand",
+    buttonText: "Feathered Peacock Stand",
+    sanskritText: "Pincha Mayurasana",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/forearm.png";
+    }
+  },
+  {
+    name: "handstand",
+    buttonText: "Handstand",
+    sanskritText: "Adho Mukha Vrksasana",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/handstand.png";
+    }
+  },
+  {
+    name: "mountain",
+    buttonText: "Mountain Pose",
+    sanskritText: "Tadasana",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/mountain.png";
+    }
+  },
+  {
+    name: "tree",
+    buttonText: "Tree Pose",
+    sanskritText: "Vrksasana",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/tree.png";
+    }
+  },
+  {
+    name: "warrior1",
+    buttonText: "Warrior I",
+    sanskritText: "Virabhadrasana I",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/warriorI.png";
+    }
+  },
+  {
+    name: "warrior3", //
+    buttonText: "Warrior III",
+    sanskritText: "Virabhadrasana III",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/warriorIII.png";
+    }
+  },
+  {
+    name: "marichiIII",
+    buttonText: "Pose Dedicated to the Sage Marichi III",
+    sanskritText: "Marichyasana III",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/twist.png";
+    }
+  },
+  {
+    name: "shoulderpressing",
+    buttonText: "Shoulder-Pressing Pose",
+    sanskritText: "Bhujapidasana",
+    image: function() {
+      var img = new Image();
+      imgScale = 640 / 480;
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0, 400 * imgScale, 400);
+      };
+      img.src = "./images/shoulderpressing.png";
+    }
+  }
 ];
 
 var extraPoses = [

@@ -11,6 +11,8 @@ var counter1 = 0;
 var counter2 = 0;
 
 var level;
+var startSound;
+var startSound = new Audio("./sounds/bowlsounds2.m4a");
 
 //onclick draw canvas and hide the buttons , in the same div, toggle hide /show
 $(document).ready(function() {
@@ -21,7 +23,9 @@ $(document).ready(function() {
   $(".level1").click(function() {
     $(document.getElementById("game-intro")).toggle(false);
     $(document.getElementById("game-container")).toggle(true);
+    startSound.play();
     level = "level1";
+
     update();
     countTotal();
   });
@@ -29,6 +33,7 @@ $(document).ready(function() {
   $(".level2").click(function() {
     $(document.getElementById("game-intro")).toggle(false);
     $(document.getElementById("game-container")).toggle(true);
+    startSound.play();
     level = "level2";
     update();
     countTotal();
@@ -194,6 +199,7 @@ function checkGameEnd() {
 function showResult() {
   clearCanvas();
   ctx.font = "20px Montserrat";
+  ctx.fillText("Yogistar Highscores", 190, 50);
   ctx.fillText("Correct answers:" + counter1, 190, 90);
 }
 
