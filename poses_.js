@@ -296,7 +296,7 @@ var poses = [
   },
   {
     name: "marichiIII",
-    buttonText: "Pose Dedicated to the Sage Marichi III",
+    buttonText: "Sage Marichi Pose III",
     sanskritText: "Marichyasana III",
     image: function() {
       var img = new Image();
@@ -445,12 +445,12 @@ var extraPoses = [
   },
   {
     name: "marichiI",
-    buttonText: "Pose Dedicated to the Sage Marichi I",
+    buttonText: "Sage Marichi Pose I",
     sanskritText: "Marichyasana I"
   },
   {
     name: "marichiIII",
-    buttonText: "Pose Dedicated to the Sage Marichi III",
+    buttonText: "Sage Marichi Pose III ",
     sanskritText: "Marichyasana III"
   },
   {

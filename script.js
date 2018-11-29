@@ -12,7 +12,10 @@ var counter2 = 0;
 
 var level;
 var startSound;
-var startSound = new Audio("./sounds/bowlsounds2.m4a");
+var startSound = new Audio("./sounds/sablarsitar.mp3");
+startSound.volume = 0.1;
+var newGameSound = new Audio("./sounds/sarod.mp3");
+newGameSound.volume = 0.2;
 
 //onclick draw canvas and hide the buttons , in the same div, toggle hide /show
 $(document).ready(function() {
@@ -23,9 +26,9 @@ $(document).ready(function() {
   $(".level1").click(function() {
     $(document.getElementById("game-intro")).toggle(false);
     $(document.getElementById("game-container")).toggle(true);
+    startSound.loop = true;
     startSound.play();
     level = "level1";
-
     update();
     countTotal();
   });
@@ -40,6 +43,7 @@ $(document).ready(function() {
   });
 
   $("#reload").click(function() {
+    newGameSound.play();
     location.reload();
   });
 
@@ -149,8 +153,8 @@ function positiveFeedbackScreen() {
 
 function negativeFeedbackScreen() {
   ctx.font = "25px Montserrat";
-  ctx.fillText("Sometimes you win,", 185, 200, 400);
-  ctx.fillText("sometimes you learn", 185, 250, 400);
+  ctx.fillText("Sometimes you win,", 180, 200, 400);
+  ctx.fillText("sometimes you learn", 180, 250, 400);
   $(document.getElementsByClassName("btn")).addClass("blocked");
 }
 
@@ -158,7 +162,7 @@ function delay() {
   setTimeout(() => {
     update();
     $(document.getElementsByClassName("btn")).removeClass("blocked");
-  }, 2000);
+  }, 1500);
 }
 function update() {
   clearCanvas();
@@ -182,9 +186,11 @@ function countTotal() {
 
 function checkGameEnd() {
   if (counter2 === poses.length) {
+    startSound.loop = false;
     setHighscore();
     showResult();
     drawHighscore();
+    // endSound.play();
     $(document.getElementsByClassName("btn"))
       .removeClass("blocked")
       .toggle(false);
