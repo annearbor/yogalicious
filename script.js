@@ -14,8 +14,8 @@ var level;
 var startSound;
 var startSound = new Audio("./sounds/sablarsitar.mp3");
 startSound.volume = 0.1;
-var newGameSound = new Audio("./sounds/sarod.mp3");
-newGameSound.volume = 0.2;
+// var newGameSound = new Audio("./sounds/sarod.mp3");
+// newGameSound.volume = 0.2;
 
 //onclick draw canvas and hide the buttons , in the same div, toggle hide /show
 $(document).ready(function() {
@@ -43,7 +43,7 @@ $(document).ready(function() {
   });
 
   $("#reload").click(function() {
-    newGameSound.play();
+    // newGameSound.play();
     location.reload();
   });
 
